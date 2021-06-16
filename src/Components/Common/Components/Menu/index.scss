@@ -1,0 +1,31 @@
+.menu-root-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .menu-item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    border-bottom: 1px solid #ebebeb;
+    width:100%;
+
+    .menu-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      font-size:16px;
+      color: #282c34;
+      text-decoration:none;
+      font-weight:500;
+      position: relative;
+    }
+
+    .menu-item.selected {
+      color: #8bc541;
+    }
+  }
+}
