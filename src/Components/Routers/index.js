@@ -42,11 +42,13 @@ function Routers(props) {
             <Menu />
             <Switch>
                 {
-                    allRoutes.map(({ path, exact, component: Component }) => (
-                        <Route key={path} exact={exact} path={path}>
-                            <Component />
-                        </Route>
-                    ))
+                    allRoutes.map(({ path, exact, component: Component }) => {
+                        return (
+                            <Route key={path} exact={exact} path={path}>
+                                <Component/>
+                            </Route>
+                        )
+                    })
                 }
             </Switch>
         </>

@@ -4,7 +4,7 @@ import './index.scss'
 function Home(props) {
     return (
         <div className="home-root-container">
-            Hello. Welcome to PixiJS World!
+            Hello. Welcome to PixiJS World!!
         </div>
     )
 }
