@@ -1,20 +1,22 @@
 import withTitle from "../../Common/HOC/WithTitle"
-import {useEffect} from "react";
+import {useEffect, useRef} from "react";
 import * as PIXI from 'pixi.js'
 import image from '../../../Images/videomonster.jpg'
 
 function Application(props) {
+    const container = useRef()
 
     useEffect(() => {
         const app = new PIXI.Application()
-        document.getElementById("pixi-container").appendChild(app.view)
+        //document.getElementById("pixi-container").appendChild(app.view)
+        container.current.appendChild(app.view)
         app.stage.addChild(PIXI.Sprite.fromImage(image))
     }, [])
 
     return (
         <div className="application-root-container">
             Application
-            <div id="pixi-container"></div>
+            <div ref={container} id="pixi-container"></div>
         </div>
     )
 }
