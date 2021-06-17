@@ -40,12 +40,27 @@ function DisplayObject(props) {
         console.log(`sprite1.worldTransform: `)
         console.dir(sprite1.worldTransform)
         console.log(`sprite1.worldVisible: ${sprite1.worldVisible}`)
+        console.log(`sprite1.getBounds() :`)
+        console.dir(sprite1.getBounds())
+        console.log(`sprite1.getGlobalPosition() :`)
+        console.dir(sprite1.getGlobalPosition())
+        console.log(`sprite1.getLocalBounds():`)
+        console.dir(sprite1.getLocalBounds())
+        //sprite1.setTransform(0, 0, 0.5, 0.5, 0.5, 0, 0, 0, 0)
+        console.log(`sprite1.toGlobal() `)
+        console.dir(sprite1.toGlobal(new PIXI.Point(0,0)))
+        console.log(`sprite1.toLocal() `)
+        console.dir(sprite1.toLocal(new PIXI.Point(10,10), sprite1))
+
         app.stage.addChild(sprite1)
     }, [])
 
     return (
         <div className="display-object-root-container">
             <h3>DisplayObject</h3>
+            <p>
+                Please check Console.
+            </p>
             <div className="pixi-container" ref={pixiContainer}></div>
         </div>
     )
